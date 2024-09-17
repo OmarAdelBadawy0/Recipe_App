@@ -26,7 +26,8 @@ Welcome to the Recipe App, a comprehensive application designed to provide a del
 
 ## Video
 
-![Watch the demo](path_to_your_video.mp4)
+https://github.com/user-attachments/assets/441f2929-9ac4-4b9d-98a0-50f03380884d
+
 *Watch the demo*
 
 ## Getting Started
