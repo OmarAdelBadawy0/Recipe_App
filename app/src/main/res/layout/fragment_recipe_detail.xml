@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="100dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_blue"
+        tools:context=".Recipe.RecipeDetail.RecipeDetailFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detailImagesRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="360dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/Details_favBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/avorite"
+            app:layout_constraintBottom_toBottomOf="@+id/detailImagesRecyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/detailImagesRecyclerView" />
+
+        <TextView
+            android:id="@+id/detailRecipeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/title"
+            android:textColor="@color/dark_blue"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailImagesRecyclerView" />
+
+        <TextView
+            android:id="@+id/detailCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/category"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/detailRecipeTitle"
+            app:layout_constraintTop_toBottomOf="@+id/detailRecipeTitle" />
+
+        <TextView
+            android:id="@+id/detailCategoryBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/body"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailCategory"
+            app:layout_constraintStart_toEndOf="@+id/detailCategory" />
+
+        <TextView
+            android:id="@+id/detailArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:text="@string/area"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailCategoryBody"
+            app:layout_constraintStart_toEndOf="@+id/detailCategoryBody" />
+
+        <TextView
+            android:id="@+id/detailAreaBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/body"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailArea"
+            app:layout_constraintStart_toEndOf="@+id/detailArea" />
+
+        <TextView
+            android:id="@+id/detailDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/details"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/detailCategory"
+            app:layout_constraintTop_toBottomOf="@+id/detailCategory" />
+
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/detailDetailsBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="This is Expandable text"
+            android:textSize="16sp"
+            app:trimExpandedText="@string/read_less"
+            app:trimCollapsedText="@string/read_more"
+            app:trimMode="trimModeLength"
+            app:trimLength="30"
+            app:colorClickableText="#039BE5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/detailDetails"
+            app:layout_constraintTop_toBottomOf="@+id/detailDetails"
+            />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtubeVideoView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:autoPlay="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailDetailsBody" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
